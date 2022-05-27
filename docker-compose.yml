@@ -15,7 +15,7 @@ services:
     # 起動時のカレントディレクトリ
     working_dir: /app
     # 起動時コマンド
-    command: node
+    command: sh -c 'yarn start'
     # コンテナ起動設定
     tty: true
     # 環境変数
@@ -26,7 +26,7 @@ services:
       - 3000:3000
     # ネットワーク設定
     networks:
-      - frontend_net
+      - app_net
 
 networks:
-  frontend_net:
+  app_net:
